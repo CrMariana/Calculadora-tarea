@@ -1,0 +1,33 @@
+@model webapp.Models.Calculadora
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    Calculadora IGV
+    <br><br>
+   <form asp-controller="Calculadora" asp-action="Calcular">
+  <label for="Producto">Nombre Producto:</label>
+  <input type="text" id="Producto" name="Producto"><br><br>
+  <label for="lname">Peso:</label>
+  <input type="double" id="lname" name="Peso"><br><br>
+   <input asp-for="Operador1" class="form.control"/>
+   <input asp-for="Operador2" class="form.control"/>
+   <input asp-for="Operando" class="form.control"/>
+   <button type="submit" class="btn btn-primary">Calcular</button>
+   </form>
+
+    <h1>@ViewData["Message0"]</h1>
+    <h1>@ViewData["Message00"]</h1>
+   <h1>@ViewData["Message1"]</h1>
+   <h1>@ViewData["Message2"]</h1>
+   <h1>@ViewData["Message3"]</h1>
+</body>
+</html>
